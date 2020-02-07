@@ -15,6 +15,9 @@ public class Info implements Serializable {
 
     private String name;
 
+    private String jobNumber;
+    private String password;
+
     public Integer getId() {
         return id;
     }
@@ -31,15 +34,29 @@ public class Info implements Serializable {
         this.name = name == null ? null : name.trim();
     }
 
+    public String getJobNumber() {
+        return jobNumber;
+    }
+
+    public void setJobNumber(String jobNumber) {
+        this.jobNumber = jobNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append("]");
-        return sb.toString();
+        return "Info{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", jobNumber='" + jobNumber + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
